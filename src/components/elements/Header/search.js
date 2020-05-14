@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
 
-const useFormSubmit = (onSearch) => {
+const useFormSubmit = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => onSearch(data);
-  //image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${heroImages[0].backdrop_path}`}
+  const history = useHistory();
+
+  const onSubmit = (searchName) => {
+    history.push({
+      pathname: "/search",
+      state: { searchTerm: searchName.name },
+    });
+  };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <input
@@ -18,6 +26,6 @@ const useFormSubmit = (onSearch) => {
   );
 };
 
-export default function Search({ onSearch }) {
-  return useFormSubmit(onSearch);
+export default function Search() {
+  return useFormSubmit();
 }

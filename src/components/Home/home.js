@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import Header from "../elements/Header/header";
 import Heroimage from "../elements/heroimage/heroimage";
 import PopularMovies from "../elements/PopularMovies/PopularMovies";
@@ -116,19 +117,6 @@ function useTopRatedMovies() {
 }
 
 const Home = () => {
-  const [search, setSearch] = useState(null);
-  const [searchData, setSearchData] = useState("");
-
-  const useSearch = async (data) => {
-    const res = await axios(
-      `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${data.name}&page=1&include_adult=true`
-    );
-
-    setSearch(res);
-    setSearchData(data);
-    return search;
-  };
-
   const res = useHeroimage();
   const images = res.Heroimage;
   const genres = res.genres;
@@ -141,23 +129,20 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="fixed-header">
-        <Header onSearch={useSearch} />
+        <Header />
       </div>
-      {search === null ? (
-        <div>
-          {images ? <Heroimage images={images} genres={genres} /> : null}
 
-          <div className="home-movie-list">
-            <PopularMovies popularMovies={images} />
-            <UpcomingMovies upcomingMovies={upcomingMovies} />
-            <NowPlaying nowPlayingMovies={nowPlayingMovies} />
-            <TopRated topRatedMovies={topRatedMovies} />
-            <HomeFooter />
-          </div>
+      <div>
+        {images ? <Heroimage images={images} genres={genres} /> : null}
+
+        <div className="home-movie-list">
+          <PopularMovies popularMovies={images} />
+          <UpcomingMovies upcomingMovies={upcomingMovies} />
+          <NowPlaying nowPlayingMovies={nowPlayingMovies} />
+          <TopRated topRatedMovies={topRatedMovies} />
+          <HomeFooter />
         </div>
-      ) : (
-        <SearchItems searchs={search} searchData={searchData} />
-      )}
+      </div>
     </div>
   );
 };
