@@ -8,8 +8,7 @@ const useFormSubmit = () => {
 
   const onSubmit = (searchName) => {
     history.push({
-      pathname: "/search",
-      state: { searchTerm: searchName.name },
+      pathname: `/${searchName.name}`,
     });
   };
 

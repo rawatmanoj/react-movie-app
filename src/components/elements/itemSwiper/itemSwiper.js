@@ -1,6 +1,7 @@
 import React from "react";
 import Swiper from "react-id-swiper";
 import "./itemSwiper.scss";
+import { Link } from "react-router-dom";
 import { IMAGE_BASE_URL, BACKDROP_SIZE } from "../../../config";
 
 const ItemSwiper = ({ items, type }) => {
@@ -66,11 +67,13 @@ const ItemSwiper = ({ items, type }) => {
                   <div style={{ height: "3.9rem" }}></div>
                   <div className="items-container">
                     <div className="movies">
-                      <img
-                        className="movies-img"
-                        alt="movie"
-                        src={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${item.poster_path}`}
-                      ></img>
+                      <Link to={{ pathname: `/movie/${item.id}` }}>
+                        <img
+                          className="movies-img"
+                          alt="movie"
+                          src={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${item.poster_path}`}
+                        ></img>
+                      </Link>
                     </div>
                   </div>
                   <div className="movie-desc">
