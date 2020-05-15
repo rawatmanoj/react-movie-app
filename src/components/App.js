@@ -6,7 +6,7 @@ import { BrowserRouter, HashRouter, Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <React.Fragment>
         {/* <Header /> */}
         <Switch>
@@ -16,7 +16,7 @@ const App = () => {
           {/* <Route component={NotFound} /> */}
         </Switch>
       </React.Fragment>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
