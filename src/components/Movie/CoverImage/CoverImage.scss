@@ -1,0 +1,64 @@
+@import "../../Styles/variables";
+@import "../../Styles/_mixins.scss";
+
+.movie-heroimage-container {
+  //   z-index: -5;
+  .movie-imagediv-container {
+    .movie-heroimage-container {
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: row;
+      //  justify-content: flex-end;
+      align-items: flex-end;
+
+      .movie-desc-container {
+        display: flex;
+        flex-direction: row;
+        padding-left: 10rem;
+        padding-bottom: 7rem;
+        .movie-items-container {
+          color: white;
+
+          .movies-info {
+            // z-index: 1;
+            height: 18.9rem;
+            width: 12.6rem;
+            border-radius: 0.4rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))
+              center center / cover no-repeat;
+
+            .movies-infoimg {
+              position: relative;
+              display: block;
+              //   z-index: -10;
+              border-radius: 0.8rem;
+              max-width: 12.6rem;
+              max-height: 19.2rem;
+            }
+          }
+        }
+
+        .movie-info-details {
+          padding-left: 2rem;
+          h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-family: $font-AlegreyaSans;
+          }
+
+          h2 {
+            font-size: 2rem;
+            font-family: $font-AlegreyaSans;
+          }
+
+          .movie-info-genre {
+            font-size: 2rem;
+            padding-right: 1rem;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@ const MovieInfo = () => {
       const res = await axios(
         `${API_URL}movie/${params.movieId}?api_key=${API_KEY}&language=en-US`
       );
-      console.log(res);
+      //  console.log(res);
       setMovie(res);
     })();
   }, []);
@@ -22,7 +22,7 @@ const MovieInfo = () => {
   return (
     <div>
       <div>
-        <CoverImage />
+        <CoverImage movie={movie} />
       </div>
     </div>
   );
