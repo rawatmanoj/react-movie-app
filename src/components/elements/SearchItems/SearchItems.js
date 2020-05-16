@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import { API_URL, API_KEY } from "../../../config";
 import { IMAGE_BASE_URL, BACKDROP_SIZE } from "../../../config";
@@ -15,7 +15,7 @@ const SearchItems = () => {
       );
       setData(res);
     })();
-  }, []);
+  }, [params.search]);
 
   return (
     <div className="searchitem-container">

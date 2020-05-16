@@ -1,0 +1,29 @@
+@import "../../Styles/variables";
+@import "../../Styles/_mixins.scss";
+
+.cast-container {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 70%;
+
+  h1 {
+    font-family: $font-AlegreyaSans;
+    font-size: 2rem;
+    color: white;
+    font-family: $font-RobotoSlab;
+    letter-spacing: 0.2rem;
+  }
+
+  .swipe-cast {
+    height: 18.9rem;
+    width: 12.6rem;
+    border-radius: 0.4rem;
+
+    .cast-img {
+      border-radius: 0.8rem;
+      max-width: 12.6rem;
+      max-height: 19.2rem;
+    }
+  }
+}

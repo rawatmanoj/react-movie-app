@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 import Header from "../elements/Header/header";
 import Heroimage from "../elements/heroimage/heroimage";
 import PopularMovies from "../elements/PopularMovies/PopularMovies";
@@ -8,7 +7,6 @@ import NowPlaying from "../elements/NowPlaying/NowPlaying";
 import TopRated from "../elements/TopRatedMovies/TopRatedMovies";
 import axios from "axios";
 import HomeFooter from "../elements/HomeFooter/HomeFooter";
-import SearchItems from "../elements/SearchItems/SearchItems";
 import { API_URL, API_KEY } from "../../config";
 
 const useHeroimage = () => {

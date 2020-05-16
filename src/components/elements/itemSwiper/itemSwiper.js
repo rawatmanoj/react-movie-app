@@ -76,9 +76,11 @@ const ItemSwiper = ({ items, type }) => {
                       </Link>
                     </div>
                   </div>
-                  <div className="movie-desc">
-                    {renderMovieDesc(item.title)}
-                  </div>
+                  {item.title ? (
+                    <div className="movie-desc">
+                      {renderMovieDesc(item.title)}
+                    </div>
+                  ) : null}
                 </div>
               );
               // }

@@ -2,7 +2,7 @@ import React from "react";
 import Home from "./Home/home";
 import searchMovie from "../components/elements/SearchItems/SearchItems";
 import Movie from "./Movie/Movie";
-import { BrowserRouter, HashRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (
