@@ -54,14 +54,17 @@ const Cast = ({ cast }) => {
           {cast.data
             ? cast.data.cast.map((item) => {
                 return (
-                  <div className="movies1">
-                    {item.profile_path ? (
-                      <img
-                        className="movies-img1"
-                        alt="movie"
-                        src={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${item.profile_path}`}
-                      ></img>
-                    ) : null}
+                  <div>
+                    <div className="movies1">
+                      {item.profile_path ? (
+                        <img
+                          className="movies-img1"
+                          alt="movie"
+                          src={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${item.profile_path}`}
+                        ></img>
+                      ) : null}
+                    </div>
+                    <div className="cast-name">{item.name}</div>
                   </div>
                 );
               })

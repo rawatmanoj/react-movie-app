@@ -14,11 +14,19 @@
     margin-bottom: 3rem;
   }
 
+  .cast-name {
+    padding-left: auto;
+    padding-right: auto;
+    font-size: 1.2001rem;
+    color: white;
+    font-family: $font-RobotoSlab;
+  }
+
   .movies1 {
     height: 18.9rem;
     width: 12.6rem;
     border-radius: 0.4rem;
-    // padding-right: 3rem;
+    padding-right: 2rem;
     .movies-img1 {
       border-radius: 0.8rem;
       max-width: 12.6rem;

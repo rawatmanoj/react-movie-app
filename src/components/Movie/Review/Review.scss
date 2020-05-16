@@ -6,6 +6,7 @@
   margin-right: auto;
   width: 70%;
   margin-top: 8rem;
+  padding-bottom: 10rem;
 
   h1 {
     color: white;
@@ -14,11 +15,24 @@
   }
 
   .movieinfo-review-container {
+    .movie-review-div {
+      margin-top: 6rem;
+    }
+
+    h2 {
+      font-family: $font-Lato;
+      font-size: 2.5rem;
+      margin: 0;
+      padding: 0;
+    }
     // height: 100vh;
     color: white;
-
     .movie-review {
-      padding: 2rem;
+      background: $base-color;
+      font-size: 1.8rem;
+      font-family: $font-AlegreyaSans;
+      padding: 4rem;
+      margin-top: 1rem;
     }
   }
 }

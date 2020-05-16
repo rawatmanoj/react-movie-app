@@ -3,12 +3,13 @@ import "./Review.scss";
 
 const Review = ({ review }) => {
   const renderReviews = (item) => {
-    if (item.content.length < 450) {
-      return <div>{item.content}</div>;
-    } else {
-      let shrink = item.content.split(" ").join(" ");
-      return <div>{shrink}</div>;
-    }
+    // if (item.content.length < 450) {
+    //   return <div className="movie-review">{item.content}</div>;
+    // } else {
+    let shrink = item.content.split(" ").slice(0, 40).join(" ");
+    //console.log(shrink);
+    return <div className="movie-review">{shrink}</div>;
+    // }
   };
 
   console.log(review);
@@ -18,8 +19,12 @@ const Review = ({ review }) => {
       {review.data ? (
         <div className="movieinfo-review-container">
           {review.data.results.map((item) => {
-            renderReviews(item);
-            // return <div className="movie-review"> {item.content}</div>;
+            return (
+              <div className="movie-review-div">
+                <h2>{item.author}</h2>
+                {renderReviews(item)}
+              </div>
+            );
           })}
         </div>
       ) : null}
