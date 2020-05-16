@@ -1,29 +1,36 @@
 @import "../../Styles/variables";
 @import "../../Styles/_mixins.scss";
 
-.cast-container {
+.items-swiper-container1 {
   margin-left: auto;
   margin-right: auto;
-
   width: 70%;
+  margin-top: 8rem;
+  margin-bottom: auto;
 
   h1 {
-    font-family: $font-AlegreyaSans;
-    font-size: 2rem;
     color: white;
     font-family: $font-RobotoSlab;
-    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
   }
 
-  .swipe-cast {
+  .movies1 {
     height: 18.9rem;
     width: 12.6rem;
     border-radius: 0.4rem;
-
-    .cast-img {
+    // padding-right: 3rem;
+    .movies-img1 {
       border-radius: 0.8rem;
       max-width: 12.6rem;
       max-height: 19.2rem;
     }
   }
 }
+
+// @media screen and (max-width: 1300px) {
+//   .items-swiper-container {
+//     margin-top: 16rem;
+//     margin-left: 12rem;
+//     margin-right: 12rem;
+//   }
+// }

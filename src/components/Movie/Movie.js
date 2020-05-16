@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import CoverImage from "../Movie/CoverImage/CoverImage";
 import Summary from "./Summary/Summary";
 import Cast from "./Cast/Cast";
+import Review from "./Review/Review";
 import "./Movie.scss";
 import { API_URL, API_KEY } from "../../config";
 
@@ -24,6 +25,23 @@ function useCast(params) {
   return cast;
 }
 
+function useReview(params) {
+  const [review, setReview] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const res = await axios(
+        `${API_URL}movie/${params.movieId}/reviews?api_key=${API_KEY}`
+      ).catch((err) => console.log(err));
+
+      //  console.log(res.data.cast);
+
+      setReview(res);
+    })();
+  }, [params.movieId]);
+  return review;
+}
+
 const MovieInfo = () => {
   const params = useParams();
   //  console.log(params.movieId);
@@ -40,6 +58,7 @@ const MovieInfo = () => {
   }, [params.movieId]);
 
   const cast = useCast(params);
+  const review = useReview(params);
 
   //console.log(cast);
 
@@ -48,6 +67,7 @@ const MovieInfo = () => {
       <CoverImage movie={movie} />
       <Summary movie={movie} />
       <Cast cast={cast} />
+      <Review review={review} />
     </div>
   );
 };

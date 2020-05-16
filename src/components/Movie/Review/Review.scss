@@ -1,0 +1,24 @@
+@import "../../Styles/variables";
+@import "../../Styles/_mixins.scss";
+
+.review-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-top: 8rem;
+
+  h1 {
+    color: white;
+    font-family: $font-RobotoSlab;
+    margin-bottom: 3rem;
+  }
+
+  .movieinfo-review-container {
+    // height: 100vh;
+    color: white;
+
+    .movie-review {
+      padding: 2rem;
+    }
+  }
+}

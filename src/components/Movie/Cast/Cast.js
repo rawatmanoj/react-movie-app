@@ -47,25 +47,27 @@ const Cast = ({ cast }) => {
 
   console.log(cast);
   return (
-    <div className="cast-container">
+    <div className="items-swiper-container1">
       <h1>CAST</h1>
-      <Swiper {...params}>
-        {cast.data
-          ? cast.data.cast.map((item) => {
-              // if (item !== undefined && item !== null) {
-              return (
-                <div className="swipe-cast">
-                  <img
-                    className="cast-img"
-                    alt="cast"
-                    src={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${item.profile_path}`}
-                  ></img>
-                </div>
-              );
-              // }
-            })
-          : null}
-      </Swiper>
+      {cast.data ? (
+        <Swiper {...params}>
+          {cast.data
+            ? cast.data.cast.map((item) => {
+                return (
+                  <div className="movies1">
+                    {item.profile_path ? (
+                      <img
+                        className="movies-img1"
+                        alt="movie"
+                        src={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${item.profile_path}`}
+                      ></img>
+                    ) : null}
+                  </div>
+                );
+              })
+            : null}
+        </Swiper>
+      ) : null}
     </div>
   );
 };
