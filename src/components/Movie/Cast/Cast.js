@@ -47,24 +47,27 @@ const Cast = ({ cast }) => {
 
   console.log(cast);
   return (
-    <div className="items-swiper-container1">
+    <div className="items-swiper-container">
       <h1>CAST</h1>
       {cast.data ? (
         <Swiper {...params}>
           {cast.data
             ? cast.data.cast.map((item) => {
                 return (
-                  <div>
-                    <div className="movies1">
-                      {item.profile_path ? (
+                  <div key={item.id} className="hover-item">
+                    <div style={{ height: "3.9rem" }}></div>
+                    <div className="items-container">
+                      <div className="movies">
                         <img
-                          className="movies-img1"
+                          className="movies-img"
                           alt="movie"
                           src={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${item.profile_path}`}
                         ></img>
-                      ) : null}
+                      </div>
                     </div>
-                    <div className="cast-name">{item.name}</div>
+                    {item.name ? (
+                      <div className="movie-desc1">{item.name}</div>
+                    ) : null}
                   </div>
                 );
               })

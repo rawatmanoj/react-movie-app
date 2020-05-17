@@ -8,7 +8,8 @@ import TopRated from "../elements/TopRatedMovies/TopRatedMovies";
 import axios from "axios";
 import HomeFooter from "../elements/HomeFooter/HomeFooter";
 import { API_URL, API_KEY } from "../../config";
-
+import Spinner from "../elements/Spinner/Spinner";
+import { useLocation } from "react-router-dom";
 const useHeroimage = () => {
   const [Heroimage, setHeroimage] = useState([]);
   const [genres, setGenre] = useState([]);
@@ -28,6 +29,7 @@ const useHeroimage = () => {
       });
 
       setGenre(genresList);
+
       //console.log(genresList);
       const posterImages = () => {
         const images = res.data.results.filter((result, i) => {
@@ -114,7 +116,19 @@ function useTopRatedMovies() {
   return topRatedMovies;
 }
 
+function useLoader() {
+  const [loader, setLoader] = useState(true);
+
+  setTimeout(() => {
+    setLoader(false);
+  }, 1000);
+
+  return loader;
+}
+
 const Home = () => {
+  const loader = useLoader();
+
   const res = useHeroimage();
   const images = res.Heroimage;
   const genres = res.genres;
@@ -125,22 +139,28 @@ const Home = () => {
   // console.log(search);
 
   return (
-    <div className="home-container">
-      <div className="fixed-header">
-        <Header />
-      </div>
+    <div>
+      {loader ? (
+        <Spinner />
+      ) : (
+        <div className="home-container">
+          <div className="fixed-header">
+            <Header />
+          </div>
+          <div>
+            {images ? <Heroimage images={images} genres={genres} /> : null}
 
-      <div>
-        {images ? <Heroimage images={images} genres={genres} /> : null}
-
-        <div className="home-movie-list">
-          <PopularMovies popularMovies={images} />
-          <UpcomingMovies upcomingMovies={upcomingMovies} />
-          <NowPlaying nowPlayingMovies={nowPlayingMovies} />
-          <TopRated topRatedMovies={topRatedMovies} />
-          <HomeFooter />
+            <div className="home-movie-list">
+              <PopularMovies popularMovies={images} />
+              <UpcomingMovies upcomingMovies={upcomingMovies} />
+              <NowPlaying nowPlayingMovies={nowPlayingMovies} />
+              <TopRated topRatedMovies={topRatedMovies} />
+              <HomeFooter />
+            </div>
+          </div>
+          )}
         </div>
-      </div>
+      )}
     </div>
   );
 };

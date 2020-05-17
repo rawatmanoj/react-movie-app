@@ -9,7 +9,7 @@ const ItemSwiper = ({ items, type }) => {
     if (title.length < 45) {
       return <h3>{title}</h3>;
     } else {
-      let shrink = title.split(" ").splice(0, 3).join(" ");
+      let shrink = title.split(" ").slice(0, 3).join(" ");
       return <h3>{shrink}</h3>;
     }
   };
