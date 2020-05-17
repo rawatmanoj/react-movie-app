@@ -5,7 +5,7 @@
   margin-top: 6rem;
 
   color: white;
-  width: 100%;
+
   margin-left: auto;
   margin-right: auto;
 
@@ -22,4 +22,30 @@ h1 {
   font-family: $font-AlegreyaSans;
 
   width: 90%;
+}
+
+@media only screen and (max-width: 600px) {
+  .movieinfo-data {
+    margin-top: 6rem;
+
+    color: white;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 100%;
+    margin-left: 2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    font-family: $font-RobotoSlab;
+    letter-spacing: 0.5rem;
+  }
+  .movieinfo-summary {
+    font-size: 1.5rem;
+    font-family: $font-AlegreyaSans;
+
+    width: 90%;
+  }
 }

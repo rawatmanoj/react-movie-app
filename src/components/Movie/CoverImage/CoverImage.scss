@@ -71,3 +71,58 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .movie-heroimage-container {
+    //   z-index: -5;
+    .movie-imagediv-container {
+      .movie-heroimage-container {
+        min-height: 50vh;
+
+        .movie-desc-container {
+          padding-left: 2rem;
+          padding-bottom: 2rem;
+          .movie-items-container {
+            .movies-info {
+              height: 14rem;
+              width: 9.4rem;
+              border-radius: 0.4rem;
+
+              .movies-infoimg {
+                border-radius: 0.8rem;
+                height: 14rem;
+                width: 9.4rem;
+              }
+            }
+          }
+
+          .movie-info-details {
+            padding-left: 1.5rem;
+            .movieinfo-title {
+              font-size: 1.8rem;
+              font-family: $font-RobotoSlab;
+            }
+
+            .movieinfo-tagline {
+              font-family: $font-AlegreyaSans;
+
+              font-size: 1.4rem;
+            }
+
+            .movieinfo-rating {
+              padding-top: 1.5rem;
+              font-size: 1.4rem;
+              font-family: $font-Lato;
+            }
+
+            .movie-info-genre {
+              font-size: 1.2rem;
+              padding-right: 1rem;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

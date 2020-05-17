@@ -64,7 +64,7 @@ const ItemSwiper = ({ items, type }) => {
               // if (item !== undefined && item !== null) {
               return (
                 <div key={item.id} className="hover-item">
-                  <div style={{ height: "3.9rem" }}></div>
+                  <div style={{ height: "4rem" }}></div>
                   <div className="items-container">
                     <div className="movies">
                       <Link to={{ pathname: `/movie/${item.id}` }}>

@@ -25,7 +25,7 @@ const Heroimage = ({ images, genres }) => {
   };
 
   return (
-    <div className="heroimage-container">
+    <div className="heroimage-container1">
       <Swiper {...params}>
         {images
           ? images.map((photo) => {
@@ -39,12 +39,16 @@ const Heroimage = ({ images, genres }) => {
                       background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)) center center / cover no-repeat, 
                 url(${IMAGE_BASE_URL}${BACKDROP_SIZE}${photo.backdrop_path}) center top / cover no-repeat rgb(255, 255, 255)`,
                     }}
-                    className="heroimage-container"
+                    className="heroimage-container2"
                   >
                     <div className="heroimage-desc">
-                      <h1>{photo.title}</h1>
-                      <h2>{photo.vote_average} Rating</h2>
-                      {genre !== undefined ? <h2>{genre.name}</h2> : null}
+                      <div className="heroimage-title">{photo.title}</div>
+                      <div className="vote_average">
+                        {photo.vote_average} Rating
+                      </div>
+                      {genre !== undefined ? (
+                        <div className="heroimage-genre">{genre.name}</div>
+                      ) : null}
                     </div>
                   </div>
                 </div>

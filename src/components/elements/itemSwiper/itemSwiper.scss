@@ -3,6 +3,8 @@
 
 .hover-item {
   transition: transform 0.2s ease-in-out;
+
+  text-align: center;
 }
 
 .hover-item:hover {
@@ -51,10 +53,6 @@
     font-size: 1.2rem;
     margin: 5px 0 0;
     width: 135px;
-    // width: 12.6rem;
-    //font-size: 1.2rem;
-    // color: rgba(255, 255, 255, 0.9);
-    // font-family: $font-Lato;
   }
 
   .swiper-separator {
@@ -68,10 +66,52 @@
   }
 }
 
-// @media screen and (max-width: 1300px) {
-//   .items-swiper-container {
-//     margin-top: 16rem;
-//     margin-left: 12rem;
-//     margin-right: 12rem;
-//   }
-// }
+@media only screen and (max-width: 600px) {
+  .hover-item {
+    margin-left: 0.2rem;
+  }
+  .items-swiper-container {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 8rem;
+
+    .items-container {
+      color: white;
+
+      .movies {
+        z-index: 1;
+        height: 18.9rem;
+        width: 12.6rem;
+        border-radius: 0.4rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))
+          center center / cover no-repeat;
+
+        .movies-img {
+          position: relative;
+          display: block;
+          z-index: -10;
+          border-radius: 0.8rem;
+          max-width: 12.6rem;
+          max-height: 19.2rem;
+        }
+      }
+    }
+    .movie-desc {
+      color: rgba(255, 255, 255, 0.9);
+      font-family: "Roboto", sans-serif;
+      font-size: 1.2rem;
+      margin: 5px 0 0;
+      width: 135px;
+    }
+
+    .swiper-separator {
+      border: none;
+      height: 2px;
+      background: radial-gradient(
+        circle,
+        rgba(210, 208, 208, 0.190914) 0%,
+        rgba(210, 208, 208, 0) 90%
+      );
+    }
+  }
+}

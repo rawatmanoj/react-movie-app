@@ -36,3 +36,42 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .review-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+
+    padding-bottom: 10rem;
+
+    h1 {
+      color: white;
+      font-family: $font-RobotoSlab;
+      // margin-bottom: 3rem;
+    }
+
+    .movieinfo-review-container {
+      .movie-review-div {
+        margin-top: 6rem;
+      }
+
+      h2 {
+        font-family: $font-Lato;
+        font-size: 2rem;
+      }
+      // height: 100vh;
+      color: white;
+      .movie-review {
+        word-wrap: break-word;
+
+        // overflow: auto;
+        background: $base-color;
+        font-size: 1.8rem;
+        font-family: $font-AlegreyaSans;
+        padding: 4rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

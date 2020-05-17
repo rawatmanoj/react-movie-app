@@ -1,15 +1,15 @@
 @import "../../Styles/variables";
 @import "../../Styles/_mixins.scss";
 
-.hover-item {
+.hover-item1 {
   transition: transform 0.2s ease-in-out;
 }
 
-.hover-item:hover {
+.hover-item1:hover {
   transform: scale(1.1);
 }
 
-.items-swiper-container {
+.items-swiper-container1 {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
@@ -20,15 +20,15 @@
     color: white;
   }
 
-  .desc-type {
-    color: white;
-    font-size: 3rem;
-    font-family: $font-AlegreyaSans;
-  }
-  .items-container {
+  // .desc-type {
+  //   color: white;
+  //   font-size: 3rem;
+  //   font-family: $font-AlegreyaSans;
+  // }
+  .items-container1 {
     color: white;
 
-    .movies {
+    .movies1 {
       z-index: 1;
       height: 18.9rem;
       width: 12.6rem;
@@ -36,7 +36,7 @@
       background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) center
         center / cover no-repeat;
 
-      .movies-img {
+      .movies-img1 {
         position: relative;
         display: block;
         z-index: -10;
@@ -46,7 +46,7 @@
       }
     }
 
-    .movies:hover {
+    .movies1:hover {
       background: none;
     }
   }
@@ -65,10 +65,64 @@
   }
 }
 
-// @media screen and (max-width: 1300px) {
-//   .items-swiper-container {
-//     margin-top: 16rem;
-//     margin-left: 12rem;
-//     margin-right: 12rem;
-//   }
-// }
+@media only screen and (max-width: 600px) {
+  .hover-item1 {
+    margin-left: 2rem;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .items-swiper-container1 {
+    width: 90%;
+    margin-top: 6rem;
+
+    h1 {
+      color: white;
+      margin: 0;
+    }
+
+    // .desc-type {
+    //   color: white;
+    //   font-size: 1.5rem;
+    //   font-family: $font-AlegreyaSans;
+    // }
+    .items-container1 {
+      color: white;
+
+      .movies1 {
+        z-index: 1;
+        height: 18.9rem;
+        width: 12.6rem;
+        border-radius: 0.4rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))
+          center center / cover no-repeat;
+
+        .movies-img1 {
+          position: relative;
+          display: block;
+          z-index: -10;
+          border-radius: 0.8rem;
+          max-width: 12.6rem;
+          max-height: 19.2rem;
+        }
+      }
+
+      .movies1:hover {
+        background: none;
+      }
+    }
+    .movie-desc1 {
+      text-align: center;
+      width: 12.6rem;
+      font-size: 1.5rem;
+      margin-right: auto;
+      margin-left: auto;
+      color: rgba(255, 255, 255, 0.7);
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+      font-family: $font-Lato;
+    }
+  }
+}

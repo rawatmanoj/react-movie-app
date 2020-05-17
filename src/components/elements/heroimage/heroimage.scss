@@ -1,29 +1,72 @@
 @import "../../Styles/variables";
 @import "../../Styles/_mixins.scss";
 
-.heroimage-container {
+.heroimage-container1 {
   padding-top: 7.2rem;
 
   .imagediv-container {
     margin-bottom: 10rem;
-    .heroimage-container {
+    .heroimage-container2 {
       color: white;
       height: 100vh;
       display: flex;
       flex-direction: column;
 
       .heroimage-desc {
-        font-size: 1.5rem;
         margin-top: auto;
-        margin-left: 10rem;
+        margin-left: 14rem;
+        margin-bottom: 12rem;
         font-family: $font-RobotoSlab;
-        .h1 {
+        .heroimage-title {
+          font-size: 4rem;
           margin: 0px;
           padding: 0px;
+          padding-bottom: 1rem;
         }
 
-        .h2 {
-          font-family: $font-Lato;
+        .vote_average {
+          font-size: 2.5rem;
+          font-family: $font-RobotoSlab;
+          padding-bottom: 0.5rem;
+        }
+
+        .heroimage-genre {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .heroimage-container1 {
+    .imagediv-container {
+      margin-bottom: 0rem;
+      .heroimage-container2 {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+
+        .heroimage-desc {
+          margin-top: auto;
+          margin-left: 3rem;
+          margin-bottom: 1rem;
+          font-family: $font-RobotoSlab;
+          .heroimage-title {
+            font-size: 2rem;
+            margin: 0px;
+            padding: 0px;
+            padding-bottom: 0.5rem;
+          }
+
+          .vote_average {
+            font-size: 1.5rem;
+            font-family: $font-RobotoSlab;
+            padding-bottom: 0.5rem;
+          }
+
+          .heroimage-genre {
+            font-size: 1.5rem;
+          }
         }
       }
     }
