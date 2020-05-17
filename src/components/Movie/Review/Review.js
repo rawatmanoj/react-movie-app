@@ -8,7 +8,6 @@ const Review = ({ review }) => {
     return <div className="movie-review">{shrink}</div>;
   };
 
-  console.log(review);
   return (
     <div className="review-container">
       <h1>POPULAR REVIEWS</h1>
@@ -16,7 +15,7 @@ const Review = ({ review }) => {
         <div className="movieinfo-review-container">
           {review.data.results.map((item) => {
             return (
-              <div className="movie-review-div">
+              <div key={item.id} className="movie-review-div">
                 <h2>{item.author}</h2>
                 {renderReviews(item)}
               </div>

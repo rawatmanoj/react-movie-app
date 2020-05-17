@@ -9,7 +9,6 @@ import axios from "axios";
 import HomeFooter from "../elements/HomeFooter/HomeFooter";
 import { API_URL, API_KEY } from "../../config";
 import Spinner from "../elements/Spinner/Spinner";
-import { useLocation } from "react-router-dom";
 const useHeroimage = () => {
   const [Heroimage, setHeroimage] = useState([]);
   const [genres, setGenre] = useState([]);
@@ -30,7 +29,6 @@ const useHeroimage = () => {
 
       setGenre(genresList);
 
-      //console.log(genresList);
       const posterImages = () => {
         const images = res.data.results.filter((result, i) => {
           return result;
@@ -76,8 +74,6 @@ function useNowplayingMovies() {
       const res = await axios(
         `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
       ).catch((err) => console.log(err));
-
-      // console.log(res);
 
       const nowPlayingMoviesList = () => {
         const list = res.data.results.filter((result, i) => {
@@ -136,7 +132,6 @@ const Home = () => {
   const upcomingMovies = useUpcomingMovies();
   const nowPlayingMovies = useNowplayingMovies();
   const topRatedMovies = useTopRatedMovies();
-  // console.log(search);
 
   return (
     <div>

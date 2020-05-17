@@ -13,7 +13,7 @@ const ItemSwiper = ({ items, type }) => {
       return <h3>{shrink}</h3>;
     }
   };
-  // console.log(items);
+
   const params = {
     observer: true,
     observeParents: true,

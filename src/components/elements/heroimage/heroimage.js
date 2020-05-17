@@ -12,7 +12,6 @@ const Heroimage = ({ images, genres }) => {
     return genre;
   };
 
-  // console.log(images);
   const params = {
     observer: true,
     autoplay: {

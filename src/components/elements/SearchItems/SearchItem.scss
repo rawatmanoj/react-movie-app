@@ -1,5 +1,13 @@
 @import "../../Styles/variables";
 @import "../../Styles/variables";
+
+.hover-item {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-item:hover {
+  transform: scale(1.1);
+}
 .searchitem-container {
   background: $primary-color;
   //   min-height: 100rem;
@@ -61,6 +69,18 @@
 
         color: white;
         font-family: $font-RobotoSlab;
+      }
+
+      .movie-desc {
+        color: rgba(255, 255, 255, 0.9);
+        font-family: "Roboto", sans-serif;
+        font-size: 1.2rem;
+        margin: 5px 0 0;
+        width: 135px;
+        // width: 12.6rem;
+        //font-size: 1.2rem;
+        // color: rgba(255, 255, 255, 0.9);
+        // font-family: $font-Lato;
       }
     }
   }

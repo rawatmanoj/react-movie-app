@@ -2,7 +2,6 @@ import React from "react";
 import { IMAGE_BASE_URL, BACKDROP_SIZE } from "../../../config";
 import "./CoverImage.scss";
 const CoverImage = ({ movie }) => {
-  console.log(movie);
   return (
     <div>
       <div className="movie-heroimage-container">
